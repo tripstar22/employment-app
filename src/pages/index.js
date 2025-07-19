@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 
-import client from "@/sanity/client";
+import client from '@/sanity/client';
 
-const INDIVIDUAL_USERS_QUERY = `*[_type == "individualUser"]{ _id, firstName, lastName }`;
+const INDIVIDUAL_USERS_QUERY = `*[_type == 'individualUser']{ _id, firstName, lastName }`;
 
 export default function Home({ individualUsers }) {
   return (
@@ -20,7 +20,8 @@ export default function Home({ individualUsers }) {
         <ul>
           {individualUsers.map((user) => (
             <li key={user._id}>
-              {user.firstName} {user.lastName}
+              {user.firstName}
+              {user.lastName}
             </li>
           ))}
         </ul>
@@ -35,7 +36,7 @@ Home.propTypes = {
       _id: PropTypes.string.isRequired,
       firstName: PropTypes.string.isRequired,
       lastName: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
 };
 
@@ -43,11 +44,11 @@ export async function getStaticProps() {
   console.log('getStaticProps running...');
   console.log('Project ID:', process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
   console.log('Dataset:', process.env.NEXT_PUBLIC_SANITY_DATASET);
-  
+
   try {
     const individualUsers = await client.fetch(INDIVIDUAL_USERS_QUERY);
     console.log('Fetched users:', individualUsers);
-    
+
     return {
       props: {
         individualUsers,
