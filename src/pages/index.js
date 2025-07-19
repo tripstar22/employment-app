@@ -1,6 +1,11 @@
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 
-export default function Home() {
+import client from "@/sanity/client";
+
+const INDIVIDUAL_USERS_QUERY = `*[_type == "individualUser"]{ _id, firstName, lastName }`;
+
+export default function Home({ individualUsers }) {
   return (
     <>
       <Head>
@@ -11,7 +16,51 @@ export default function Home() {
       </Head>
       <main>
         Employment app
+
+        <ul>
+          {individualUsers.map((user) => (
+            <li key={user._id}>
+              {user.firstName} {user.lastName}
+            </li>
+          ))}
+        </ul>
       </main>
     </>
   );
+}
+
+Home.propTypes = {
+  individualUsers: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string.isRequired,
+      firstName: PropTypes.string.isRequired,
+      lastName: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+
+export async function getStaticProps() {
+  console.log('getStaticProps running...');
+  console.log('Project ID:', process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
+  console.log('Dataset:', process.env.NEXT_PUBLIC_SANITY_DATASET);
+  
+  try {
+    const individualUsers = await client.fetch(INDIVIDUAL_USERS_QUERY);
+    console.log('Fetched users:', individualUsers);
+    
+    return {
+      props: {
+        individualUsers,
+      },
+      revalidate: 30, // Revalidate every 30 seconds
+    };
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    return {
+      props: {
+        individualUsers: [],
+      },
+      revalidate: 30,
+    };
+  }
 }
