@@ -1,5 +1,16 @@
-import "@/styles/globals.css";
+import PropTypes from 'prop-types';
 
-export default function App({ Component, pageProps }) {
+import '../styles/globals.css';
+
+export default function App(props) {
+  const { Component, pageProps } = props;
+
+  // props spreading required for Next.js to work correctly
+  // eslint-disable-next-line react/jsx-props-no-spreading
   return <Component {...pageProps} />;
 }
+
+App.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
