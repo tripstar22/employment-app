@@ -1,6 +1,13 @@
+// * third party library imports *
 import PropTypes from 'prop-types';
 
+// * font imports *
 import fontSerifDefault from '../styles/fonts';
+
+// * bootstrap style import *
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// * global style import *
 import '../styles/globals.css';
 
 export default function App(props) {

@@ -1,0 +1,7 @@
+:root {
+  --font-size-base: 16px; /* Base font size for rem calculations */
+}
+
+html {
+  font-size: var(--font-size-base);
+}
