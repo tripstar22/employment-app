@@ -7,8 +7,8 @@
 =================================================== */
 
 .button {
-  background-color: $colorPrimary;
-  border: 2px solid $colorPrimary;
+  background-color: $colorTeal;
+  border: 2px solid $colorTeal;
   border-radius: $borderRadius;
   color: $colorWhite;
   cursor: pointer;
@@ -20,8 +20,8 @@
               color $transitionDefault;
 
   &:hover {
-    background-color: darken($colorPrimary, 5%);
-    border-color: darken($colorPrimary, 5%);
+    background-color: darken($colorTeal, 5%);
+    border-color: darken($colorTeal, 5%);
     color: $colorWhite;
   }
 
@@ -31,12 +31,12 @@
 
   &___secondary {
     background-color: $colorWhite;
-    color: $colorPrimary;
+    color: $colorTeal;
 
     &:hover {
       background-color: darken($colorWhite, 5%);
-      border-color: darken($colorPrimary, 5%);
-      color: darken($colorPrimary, 5%);
+      border-color: darken($colorTeal, 5%);
+      color: darken($colorTeal, 5%);
     }
   }
 }

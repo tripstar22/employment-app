@@ -2,12 +2,26 @@
  # app footer #
 */
 
+// * imports
+@import '../../styles/scss/vars';
+
 /* ===================================================
   All Screen Sizes
 =================================================== */
 
 .appfooter {
-  
+  background-color: $colorSmoke;
+  padding-bottom: $spacingXl;
+
+  &_link {
+    color: $colorTeal;
+    text-decoration: underline;
+    transition: color $transitionDefault;
+
+    &:hover {
+      color: darken($colorTeal, 5%);
+    }
+  }
 }
 
 /* ===================================================

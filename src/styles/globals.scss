@@ -5,6 +5,7 @@
 @import 'scss/_vars';
 
 // * custom global styles
+@import 'scss/appform';
 @import 'scss/buttons';
 @import 'scss/headings';
 
@@ -17,7 +18,15 @@ html {
 }
 
 body {
+  background-color: $colorWhite; // Default background color
   color: $colorBlack; // Default text color
-  padding-bottom: $paddingBottomDefault; /* 8px */
-  padding-top: $paddingTopDefault; /* 8px */
+}
+
+a {
+  color: $colorTeal; // Default link color
+  transition: color $transitionDefault;
+
+  &:hover {
+    color: darken($colorTeal, 5%);
+  }
 }

@@ -2,18 +2,29 @@
  # app header #
 */
 
+// * imports
+@import '../../styles/scss/vars';
+
 /* ===================================================
   All Screen Sizes
 =================================================== */
 
 .appheader {
+  background-color: $colorSmoke;
 
   &_brand {
     font-weight: 900;
     font-size: 1.5rem;
+  }
+  &_brandlink {
+    display: block;
+  }
+  &_logo {
+    transition: opacity $transitionDefault;
+    width: 75px;
 
-    a {
-      color: black;
+    &:hover {
+      opacity: $opacityDefault;
     }
   }
   &_nav {

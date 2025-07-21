@@ -26,8 +26,8 @@ function LoginPrompt() {
                 Encouraging text to sign up!
               </p>
               <div className={classes.loginprompt_ctas}>
-                <Link href="/job-seeker-signup" className="button">Job Seeker</Link>
-                <Link href="/employer-signup" className="button button___secondary">Employer</Link>
+                <Link href="/signup/job-seeker" className="button">Job Seeker</Link>
+                <Link href="/signup/employer" className="button button___secondary">Employer</Link>
               </div>
               <p className={classes.loginprompt_text}>
                 Already have an account?

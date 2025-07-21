@@ -21,14 +21,15 @@ $breakpointLg: 992px;
 $breakpointXl: 1200px;
 $breakpointXxl: 1400px;
 
-// * transition animations
-$transitionDefault: 0.25s ease-in-out;
-
-// * border radius
-$borderRadius: 4px;
-
 // * colors
-$colorPrimary: #00695C;
+$colorTeal: #00695C; // primary color
 $colorBlack: #212121; // Default text color
+$colorSmoke: #EEEEEE; 
 $colorWhite: #FAFAFA; // Inverse text color for dark backgrounds
 
+// * transition animations
+$transitionDefault: 0.25s ease-in-out;
+// * border radius
+$borderRadius: 4px;
+// * opacity
+$opacityDefault: 0.75;

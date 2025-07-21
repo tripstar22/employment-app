@@ -14,9 +14,9 @@ function AppFooter() {
         <Row>
           <Col>
             <Nav className={classes.appfooter_nav}>
-              <Nav.Link href="#">Privacy Policy</Nav.Link>
-              <Nav.Link href="#">Terms of Service</Nav.Link>
-              <Nav.Link href="#">Contact Us</Nav.Link>
+              <Nav.Link href="#" className={classes.appfooter_link}>Privacy Policy</Nav.Link>
+              <Nav.Link href="#" className={classes.appfooter_link}>Terms of Service</Nav.Link>
+              <Nav.Link href="#" className={classes.appfooter_link}>Contact Us</Nav.Link>
             </Nav>
           </Col>
         </Row>

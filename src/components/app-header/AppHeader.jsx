@@ -17,6 +17,9 @@ import SearchIcon from '@mui/icons-material/Search';
 // * custom component imports *
 import OffcanvasNav from '@/components/offcanvas-nav/OffcanvasNav';
 
+// * svg imports *
+import PlaceholderLogo from '@/styles/svg/placeholder-logo.svg';
+
 // * styles imports *
 import classes from './AppHeader.module.scss';
 
@@ -33,7 +36,7 @@ function AppHeader() {
   };
 
   return (
-    <Navbar bg="light" expand="lg" className={classes.appheader}>
+    <Navbar expand="lg" className={classes.appheader}>
       <Container fluid>
         <div>
           <button
@@ -47,8 +50,8 @@ function AppHeader() {
           <OffcanvasNav show={show} onHide={handleOffcanvasClose} />
         </div>
         <div className={classes.appheader_brand}>
-          <Link href="/">
-            Employment App
+          <Link href="/" className={classes.appheader_brandlink}>
+            <PlaceholderLogo className={classes.appheader_logo} />
           </Link>
         </div>
         <Nav>
