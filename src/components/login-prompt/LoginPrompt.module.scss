@@ -2,6 +2,9 @@
  # login prompt #
 */
 
+// * imports
+@import '../../styles/scss/vars';
+
 /* ===================================================
   All Screen Sizes
 =================================================== */
@@ -11,6 +14,21 @@
   display: flex;
   min-height: 100vh;
   text-align: center;
+
+  &_ctas {
+    display: flex;
+    justify-content: center;
+    padding-bottom: $spacingLg;
+  }
+  &_highlight {
+    font-size: 1.11rem;
+    font-weight: 700;
+    padding-bottom: $spacingSm;
+  }
+  &_text {
+    font-size: 0.88rem;
+    margin-bottom: $spacingSm;
+  }
 }
 
 /* ===================================================

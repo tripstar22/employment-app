@@ -1,6 +1,3 @@
-// * transition animations
-$transitionDefault: 0.25s ease-in-out;
-
 // * base spacing unit
 $spacingBase: 8px;
 
@@ -16,3 +13,22 @@ $spacingSm: $spacingBase; // 8px
 $spacingMd: $spacingBase * 2; // 16px
 $spacingLg: $spacingBase * 3; // 24px
 $spacingXl: $spacingBase * 4; // 32px
+
+// * screen size breakpoints
+$breakpointSm: 576px;
+$breakpointMd: 768px;
+$breakpointLg: 992px;
+$breakpointXl: 1200px;
+$breakpointXxl: 1400px;
+
+// * transition animations
+$transitionDefault: 0.25s ease-in-out;
+
+// * border radius
+$borderRadius: 4px;
+
+// * colors
+$colorPrimary: #00695C;
+$colorBlack: #212121; // Default text color
+$colorWhite: #FAFAFA; // Inverse text color for dark backgrounds
+

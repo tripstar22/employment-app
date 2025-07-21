@@ -1,0 +1,23 @@
+// * third party imports
+@import '~bootstrap/scss/bootstrap';
+
+// * custom vars
+@import 'scss/_vars';
+
+// * custom global styles
+@import 'scss/buttons';
+@import 'scss/headings';
+
+:root {
+  --font-size-base: 18px; /* Base font size for rem calculations */
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  color: $colorBlack; // Default text color
+  padding-bottom: $paddingBottomDefault; /* 8px */
+  padding-top: $paddingTopDefault; /* 8px */
+}

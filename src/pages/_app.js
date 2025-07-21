@@ -8,7 +8,7 @@ import fontSerifDefault from '../styles/fonts';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // * global style import *
-import '../styles/globals.css';
+import '../styles/globals.scss';
 
 export default function App(props) {
   const { Component, pageProps } = props;
