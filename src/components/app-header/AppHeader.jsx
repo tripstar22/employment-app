@@ -1,6 +1,9 @@
 // * react imports *
 import { useState } from 'react';
 
+// * next.js imports *
+import Link from 'next/link';
+
 // * react-bootstrap imports *
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -31,7 +34,7 @@ function AppHeader() {
 
   return (
     <Navbar bg="light" expand="lg" className={classes.appheader}>
-      <Container fluid className={classes.appheader_row}>
+      <Container fluid>
         <div>
           <button
             type="button"
@@ -43,9 +46,11 @@ function AppHeader() {
           </button>
           <OffcanvasNav show={show} onHide={handleOffcanvasClose} />
         </div>
-        <Navbar href="#home" className={classes.appheader_brand}>
-          Employment App
-        </Navbar>
+        <div className={classes.appheader_brand}>
+          <Link href="/">
+            Employment App
+          </Link>
+        </div>
         <Nav>
           <Nav.Link href="#">
             <SearchIcon />

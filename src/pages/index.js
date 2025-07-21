@@ -8,6 +8,7 @@ import sanityClient from '@/sanity/client';
 // * custom component imports *
 import AppFooter from '@/components/app-footer/AppFooter';
 import AppHeader from '@/components/app-header/AppHeader';
+import LoginPrompt from '@/components/login-prompt/LoginPrompt';
 
 const INDIVIDUAL_USERS_QUERY = `*[_type == 'individualUser']{ _id, firstName, lastName }`;
 
@@ -22,7 +23,7 @@ export default function Home({ individualUsers }) {
       </Head>
       <AppHeader />
       <main>
-        Employment app
+        <LoginPrompt />
 
         <ul>
           {individualUsers.map((user) => (

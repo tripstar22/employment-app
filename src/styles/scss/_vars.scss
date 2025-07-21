@@ -1,0 +1,18 @@
+// * transition animations
+$transitionDefault: 0.25s ease-in-out;
+
+// * base spacing unit
+$spacingBase: 8px;
+
+// * calculated padding variables
+$paddingTopDefault: $spacingBase;
+$paddingBottomDefault: $spacingBase;
+$paddingLeftDefault: $spacingBase;
+$paddingRightDefault: $spacingBase;
+
+// * spacing scale (calculated from base)
+$spacingXs: $spacingBase * 0.5; // 4px
+$spacingSm: $spacingBase; // 8px
+$spacingMd: $spacingBase * 2; // 16px
+$spacingLg: $spacingBase * 3; // 24px
+$spacingXl: $spacingBase * 4; // 32px
