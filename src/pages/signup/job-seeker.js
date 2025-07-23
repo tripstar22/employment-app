@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 // * custom component imports *
 import AppFooter from '@/components/app-footer/AppFooter';
 import AppHeader from '@/components/app-header/AppHeader';
-import FormJobSeekerSignUp from '@/components/forms/FormJobSeekerSignUp';
+import FormJobSeekerSignup from '@/components/forms/FormJobSeekerSignup';
 
 export default function JobSeeker() {
   return (
@@ -32,7 +32,7 @@ export default function JobSeeker() {
             </Col>
           </Row>
         </Container>
-        <FormJobSeekerSignUp />
+        <FormJobSeekerSignup />
       </main>
       <AppFooter />
     </>

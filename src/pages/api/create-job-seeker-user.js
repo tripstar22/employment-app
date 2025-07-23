@@ -10,11 +10,11 @@ export default async function handler(req, res) {
 
   try {
     const {
-      firstName, lastName, email, password,
+      firstName, lastName, email, password, professionalTitle,
     } = req.body;
 
     // Validate required fields
-    if (!firstName || !lastName || !email || !password) {
+    if (!firstName || !lastName || !email || !password || !professionalTitle) {
       console.log('Validation failed - missing fields');
       return res.status(400).json({ error: 'All fields are required' });
     }
@@ -27,6 +27,7 @@ export default async function handler(req, res) {
       firstName,
       lastName,
       email,
+      professionalTitle,
       // Note: In production, hash the password before storing
       password, // Consider using a secure auth service instead
     });
