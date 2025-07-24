@@ -28,11 +28,11 @@ function AppLogin() {
                 {' '}
                 <Link href="/">Sign Up</Link>
               </p>
-              <FormLogin />
             </div>
           </Col>
         </Row>
       </Container>
+      <FormLogin />
     </section>
   );
 }

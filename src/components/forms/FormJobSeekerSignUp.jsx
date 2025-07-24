@@ -216,14 +216,18 @@ function FormJobSeekerSignup() {
                     </div>
                   </Col>
                 </Row>
-                <div className="appform_actions">
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting || !passwordsMatch || formData.confirmPassword === ''}
-                  >
-                    {isSubmitting ? 'Creating Account...' : 'Sign Up'}
-                  </Button>
-                </div>
+                <Row>
+                  <Col>
+                    <div className="appform_actions">
+                      <Button
+                        type="submit"
+                        disabled={isSubmitting || !passwordsMatch || formData.confirmPassword === ''}
+                      >
+                        {isSubmitting ? 'Creating Account...' : 'Sign Up'}
+                      </Button>
+                    </div>
+                  </Col>
+                </Row>
               </Form>
             </Col>
           </Row>
