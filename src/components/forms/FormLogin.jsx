@@ -1,6 +1,9 @@
 // * react imports *
 import { useState } from 'react';
 
+// * next.js imports *
+import { useRouter } from 'next/router';
+
 // * third party library imports *
 import PropTypes from 'prop-types';
 
@@ -12,6 +15,9 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
 function FormLogin({ onLogin = null }) {
+  // * hooks *
+  const router = useRouter();
+
   // * state *
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
@@ -43,8 +49,6 @@ function FormLogin({ onLogin = null }) {
         throw new Error(result.error || 'Login failed');
       }
 
-      console.log('Login successful:', result.user);
-
       // Here you can:
       // 1. Store user data in state/context
       // 2. Redirect to dashboard
@@ -54,8 +58,11 @@ function FormLogin({ onLogin = null }) {
       setEmail('');
       setPassword('');
 
-      // You might want to call an onLogin prop or redirect
+      // Call onLogin callback if provided
       onLogin?.(result.user);
+
+      // Redirect to profile page
+      router.push(`/profile/${result.user._id}`);
       console.log('success', result.user);
     } catch (err) {
       console.error('Login error:', err);
